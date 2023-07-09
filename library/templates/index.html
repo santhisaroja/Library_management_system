@@ -1,0 +1,40 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %} LIBRARY MANAGEMENT SYSTEM {% endblock %}
+{% block css %}
+{% endblock %}
+{% block body %}
+ <style>
+
+        body {
+            background: url("{% static 'books.jpeg' %}");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+        }
+    </style>
+
+    <div >
+      <center>
+    <div class="container-fluid py-3">
+      <h1 class="display-5 fw-bold">Welcome to SAVANT Library Management System</h1>
+      <p class="col-md-8 fs-4">Student can register to login. After issuing any book by the admin, the book should be returned within 14 days or else a fine of Rs 5/- will be charged per day until the book is returned.</p>
+    </div>
+   
+    <div class="container">
+  <div class="row">
+
+    <div class="col-lg-6">
+      <img src="{% static 'admin.png' %}" width="50%" height="50%" alt=""><br><br>
+        <a class="btn btn-outline-dark btn-outline-dark" style="text-align:center" href="/admin_login/">Admin</a>
+    </div>
+
+    <div class="col-lg-6">
+      <img src="{% static 'students.png' %}" width="50%" height="50%" alt=""><br><br>
+      <a class="btn btn-outline-dark btn-outline-dark" href="/student_login/">Student</a></center>
+    </div>
+  </div>
+  </div>
+</div>
+{% endblock %}
